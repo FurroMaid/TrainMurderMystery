@@ -6,6 +6,7 @@ import dev.doctor4t.trainmurdermystery.block.entity.SeatEntity;
 import dev.doctor4t.trainmurdermystery.entity.FirecrackerEntity;
 import dev.doctor4t.trainmurdermystery.entity.GrenadeEntity;
 import dev.doctor4t.trainmurdermystery.entity.PlayerBodyEntity;
+import dev.doctor4t.trainmurdermystery.entity.StickyNoteEntity;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
@@ -29,6 +30,10 @@ public interface TMMEntities {
     );
     EntityType<GrenadeEntity> GRENADE = registrar.create("grenade", EntityType.Builder.create(GrenadeEntity::new, SpawnGroup.MISC)
             .dimensions(.2f, .2f)
+            .maxTrackingRange(128)
+    );
+    EntityType<StickyNoteEntity> STICKY_NOTE = registrar.create("sticky_note", EntityType.Builder.create(StickyNoteEntity::new, SpawnGroup.MISC)
+            .dimensions(.45f, .45f)
             .maxTrackingRange(128)
     );
 

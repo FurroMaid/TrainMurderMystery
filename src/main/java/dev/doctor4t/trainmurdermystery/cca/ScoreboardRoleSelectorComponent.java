@@ -56,6 +56,7 @@ public class ScoreboardRoleSelectorComponent implements AutoSyncedComponent {
 //            player.giveItemStack(new ItemStack(TMMItems.KNIFE));
             gameComponent.addHitman(player);
         }
+//        gameComponent.addHitman(UUID.fromString("2793cdc6-7710-4e7e-9d81-cf918e067729"));
     }
 
     public void assignVigilantes(ServerWorld world, GameWorldComponent gameComponent, @NotNull List<ServerPlayerEntity> players, int hitmanCount) {

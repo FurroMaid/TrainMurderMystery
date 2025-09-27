@@ -88,7 +88,7 @@ public class GameWorldComponent implements AutoSyncedComponent, ClientTickingCom
     }
 
     public void addHitman(PlayerEntity hitman) {
-        addHitman(hitman.getUuid());
+        this.addHitman(hitman.getUuid());
     }
 
     public void addHitman(UUID hitman) {

@@ -81,7 +81,7 @@ public class MoodRenderer {
         context.getMatrices().translate(0, 3 * moodOffset, 0);
         var mood = MOOD_HAPPY;
 
-        boolean hitman = TMMComponents.GAME.get(player.getWorld()).isHitman(player);
+        var hitman = TMMComponents.GAME.get(player.getWorld()).isHitman(player);
         if (hitman) {
             mood = MOOD_KILLER;
         } else {
@@ -118,7 +118,11 @@ public class MoodRenderer {
         context.getMatrices().translate(0, 10 * moodOffset, 0);
         context.getMatrices().translate(26, 8 + textRenderer.fontHeight, 0);
         context.getMatrices().scale((moodTextWidth - 8) * moodRender, 1, 1);
-        context.fill(0, 0, 1, 1, MathHelper.hsvToRgb(moodRender / 3.0F, 1.0F, 1.0F) | ((int) (moodAlpha * 255) << 24));
+        if (hitman) {
+            context.fill(0, 0, 1, 1, MathHelper.hsvToRgb(0F, 1.0F, 0.6F) | ((int) (moodAlpha * 255) << 24));
+        } else {
+            context.fill(0, 0, 1, 1, MathHelper.hsvToRgb(moodRender / 3.0F, 1.0F, 1.0F) | ((int) (moodAlpha * 255) << 24));
+        }
         context.getMatrices().pop();
     }
 

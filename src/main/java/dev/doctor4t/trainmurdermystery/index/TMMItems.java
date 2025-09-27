@@ -39,6 +39,7 @@ public @SuppressWarnings("unchecked") interface TMMItems {
     Item MARTINI = registrar.create("martini", new CocktailItem(new Item.Settings().maxCount(1).food(FoodComponents.HONEY_BOTTLE)), EQUIPMENT_GROUP);
     Item COSMOPOLITAN = registrar.create("cosmopolitan", new CocktailItem(new Item.Settings().maxCount(1).food(FoodComponents.HONEY_BOTTLE)), EQUIPMENT_GROUP);
     Item CHAMPAGNE = registrar.create("champagne", new CocktailItem(new Item.Settings().maxCount(1).food(FoodComponents.HONEY_BOTTLE)), EQUIPMENT_GROUP);
+    Item STICKY_NOTE = registrar.create("sticky_note", new StickyNoteItem(new Item.Settings().maxCount(4)), EQUIPMENT_GROUP);
 
     static void initialize() {
         registrar.registerEntries();
@@ -53,7 +54,7 @@ public @SuppressWarnings("unchecked") interface TMMItems {
                 .build());
         Registry.register(Registries.ITEM_GROUP, EQUIPMENT_GROUP, FabricItemGroup.builder()
                 .displayName(Text.translatable("itemGroup.trainmurdermystery.equipment"))
-                .icon(() -> new ItemStack(TMMItems.KEY))
+                .icon(() -> new ItemStack(KEY))
                 .build());
     }
 }

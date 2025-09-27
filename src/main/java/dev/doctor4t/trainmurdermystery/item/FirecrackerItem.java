@@ -2,6 +2,7 @@ package dev.doctor4t.trainmurdermystery.item;
 
 import dev.doctor4t.trainmurdermystery.entity.FirecrackerEntity;
 import dev.doctor4t.trainmurdermystery.index.TMMEntities;
+import dev.doctor4t.trainmurdermystery.util.AdventureUsable;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemUsageContext;
@@ -9,14 +10,15 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
+import org.jetbrains.annotations.NotNull;
 
-public class FirecrackerItem extends Item {
+public class FirecrackerItem extends Item implements AdventureUsable {
     public FirecrackerItem(Settings settings) {
         super(settings);
     }
 
     @Override
-    public ActionResult useOnBlock(ItemUsageContext context) {
+    public ActionResult useOnBlock(@NotNull ItemUsageContext context) {
         if (context.getSide().equals(Direction.UP)) {
             PlayerEntity player = context.getPlayer();
             World world = player.getWorld();

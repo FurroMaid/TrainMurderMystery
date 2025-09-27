@@ -8,6 +8,7 @@
     "EntityMixin",
     "HungerManagerMixin",
     "ItemEntityMixin",
+    "ItemStackMixin",
     "PlayerEntityMixin",
     "ServerPlayerEntityMixin",
     "client.restrictions.DebugHudMixin"
@@ -18,6 +19,7 @@
   "client": [
     "client.AbstractClientPlayerEntityMixin",
     "client.EntityRendererDispatchMixin",
+    "client.GameRendererMixin",
     "client.MinecraftClientMixin",
     "client.PlayerEntityRendererMixin",
     "client.TrueDarknessLightmapTextureManagerMixin",

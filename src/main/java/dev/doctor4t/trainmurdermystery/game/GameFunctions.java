@@ -135,12 +135,13 @@ public class GameFunctions {
         }
 
         // clear items, clear previous game data
-        for (ServerPlayerEntity serverPlayerEntity : playerPool) {
+        for (var serverPlayerEntity : playerPool) {
             serverPlayerEntity.getInventory().clear();
             PlayerMoodComponent.KEY.get(serverPlayerEntity).reset();
             PlayerStoreComponent.KEY.get(serverPlayerEntity).reset();
             PlayerPoisonComponent.KEY.get(serverPlayerEntity).reset();
             PlayerPsychoComponent.KEY.get(serverPlayerEntity).reset();
+            PlayerNoteComponent.KEY.get(serverPlayerEntity).reset();
         }
         gameComponent.resetHitmanList();
 
@@ -206,6 +207,8 @@ public class GameFunctions {
 
         // discard all player bodies
         for (var body : world.getEntitiesByType(TMMEntities.PLAYER_BODY, playerBodyEntity -> true)) body.discard();
+        for (var entity : world.getEntitiesByType(TMMEntities.FIRECRACKER, entity -> true)) entity.discard();
+        for (var entity : world.getEntitiesByType(TMMEntities.STICKY_NOTE, entity -> true)) entity.discard();
 
         // reset all players to adventure mode, clear inventory and teleport to spawn
         var teleportTarget = new TeleportTarget(world, new Vec3d(-872.5, 0, -323), Vec3d.ZERO, 90, 0, TeleportTarget.NO_OP);
@@ -219,6 +222,7 @@ public class GameFunctions {
             PlayerStoreComponent.KEY.get(player).reset();
             PlayerPoisonComponent.KEY.get(player).reset();
             PlayerPsychoComponent.KEY.get(player).reset();
+            PlayerNoteComponent.KEY.get(player).reset();
         }
 
         // reset game component
@@ -404,6 +408,9 @@ public class GameFunctions {
             for (ItemEntity item : serverWorld.getEntitiesByType(EntityType.ITEM, playerBodyEntity -> true)) {
                 item.discard();
             }
+            for (var entity : serverWorld.getEntitiesByType(TMMEntities.FIRECRACKER, entity -> true)) entity.discard();
+            for (var entity : serverWorld.getEntitiesByType(TMMEntities.STICKY_NOTE, entity -> true)) entity.discard();
+
 
             TMM.LOGGER.info("Train reset successful.");
             return false;

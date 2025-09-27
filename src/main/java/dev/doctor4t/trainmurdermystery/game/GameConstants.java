@@ -2,8 +2,10 @@ package dev.doctor4t.trainmurdermystery.game;
 
 import dev.doctor4t.trainmurdermystery.cca.PlayerStoreComponent;
 import dev.doctor4t.trainmurdermystery.index.TMMItems;
+import dev.doctor4t.trainmurdermystery.mixin.ItemStackMixin;
 import dev.doctor4t.trainmurdermystery.util.ShopEntry;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
@@ -69,6 +71,7 @@ public interface GameConstants {
             new ShopEntry(TMMItems.LOCKPICK.getDefaultStack(), 150, ShopEntry.Type.TOOL),
             new ShopEntry(TMMItems.CROWBAR.getDefaultStack(), 150, ShopEntry.Type.TOOL),
             new ShopEntry(TMMItems.BODY_BAG.getDefaultStack(), 150, ShopEntry.Type.TOOL),
+            new ShopEntry(new ItemStack(TMMItems.STICKY_NOTE, 4), 35, ShopEntry.Type.TOOL),
             new ShopEntry(TMMItems.BLACKOUT.getDefaultStack(), 75, ShopEntry.Type.TOOL) {
                 @Override
                 public boolean onBuy(@NotNull PlayerEntity player) {
