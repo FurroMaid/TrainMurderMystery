@@ -9,6 +9,7 @@ import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
+import net.minecraft.component.DataComponentTypes;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundCategory;
@@ -94,6 +95,9 @@ public class FoodPlatterBlock extends BlockWithEntity {
 
             if (!hasPlatterItem) {
                 ItemStack randomItem = platter.get(world.random.nextInt(platter.size())).copy();
+                randomItem.setCount(1);
+                randomItem.set(DataComponentTypes.MAX_STACK_SIZE, 1);
+                
                 if (blockEntity.getPoisonedItemsCount() > 0) {
                     randomItem.set(TMMDataComponentTypes.POISONED, true);
                     randomItem.set(TMMDataComponentTypes.POISONER, player.getUuidAsString());
