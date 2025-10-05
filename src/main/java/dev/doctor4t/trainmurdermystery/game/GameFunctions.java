@@ -132,9 +132,9 @@ public class GameFunctions {
         // select roles
         var roleSelector = ScoreboardRoleSelectorComponent.KEY.get(world.getScoreboard());
         var killerCount = (int) Math.floor(players.size() * .2f);
-        roleSelector.assignKillers(world, gameComponent, players, killerCount);
+        var total = roleSelector.assignKillers(world, gameComponent, players, killerCount);
         roleSelector.assignVigilantes(world, gameComponent, players, killerCount);
-        return killerCount;
+        return total;
     }
 
     private static void baseInitialize(ServerWorld world, TrainWorldComponent trainComponent, GameWorldComponent gameComponent, List<ServerPlayerEntity> players) {

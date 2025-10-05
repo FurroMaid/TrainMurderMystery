@@ -39,7 +39,7 @@ public class ScoreboardRoleSelectorComponent implements AutoSyncedComponent {
         return count;
     }
 
-    public void assignKillers(ServerWorld world, GameWorldComponent gameComponent, @NotNull List<ServerPlayerEntity> players, int killerCount) {
+    public int assignKillers(ServerWorld world, GameWorldComponent gameComponent, @NotNull List<ServerPlayerEntity> players, int killerCount) {
         this.reduceKillers();
         var killers = new ArrayList<UUID>();
         for (var uuid : this.forcedKillers) {
@@ -68,7 +68,7 @@ public class ScoreboardRoleSelectorComponent implements AutoSyncedComponent {
             }
         }
         for (var player : killers) gameComponent.addKiller(player);
-//        if (FabricLoader.getInstance().isDevelopmentEnvironment()) gameComponent.addKiller(UUID.fromString("2793cdc6-7710-4e7e-9d81-cf918e067729"));
+        return killers.size();
     }
 
     private void reduceKillers() {
