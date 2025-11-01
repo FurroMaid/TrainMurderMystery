@@ -131,6 +131,7 @@ public class TMMClient implements ClientModInitializer {
                 TMMBlocks.GOLD_SPRINKLER,
                 TMMBlocks.GOLD_ORNAMENT,
                 TMMBlocks.WHEEL,
+                TMMBlocks.RUSTED_WHEEL,
                 TMMBlocks.BARRIER_PANEL,
                 TMMBlocks.FOOD_PLATTER,
                 TMMBlocks.DRINK_TRAY,
@@ -182,6 +183,10 @@ public class TMMClient implements ClientModInitializer {
         BlockEntityRendererFactories.register(
                 TMMBlockEntities.WHEEL,
                 ctx -> new WheelBlockEntityRenderer(TMM.id("textures/entity/wheel.png"), ctx)
+        );
+        BlockEntityRendererFactories.register(
+                TMMBlockEntities.RUSTED_WHEEL,
+                ctx -> new WheelBlockEntityRenderer(TMM.id("textures/entity/rusted_wheel.png"), ctx)
         );
         BlockEntityRendererFactories.register(
                 TMMBlockEntities.BEVERAGE_PLATE,

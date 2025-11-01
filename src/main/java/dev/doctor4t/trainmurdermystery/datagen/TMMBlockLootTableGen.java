@@ -154,6 +154,7 @@ public class TMMBlockLootTableGen extends FabricBlockLootTableProvider {
         this.addNothingDrop(TMMBlocks.MUNTZ_STEEL_DOOR);
         this.addNothingDrop(TMMBlocks.NAVY_STEEL_DOOR);
         this.addNothingDrop(TMMBlocks.WHEEL);
+        this.addNothingDrop(TMMBlocks.RUSTED_WHEEL);
     }
 
     private void addFamily(BlockFamily family) {

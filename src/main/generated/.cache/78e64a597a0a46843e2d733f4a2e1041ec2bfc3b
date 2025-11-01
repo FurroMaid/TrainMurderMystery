@@ -1,4 +1,4 @@
-// 1.21.1	2025-10-27T21:51:21.4600548	TrainMurderMystery/Block Loot Tables
+// 1.21.1	2025-10-28T22:07:01.9222991	TrainMurderMystery/Block Loot Tables
 1d4929d7d6176f60e5ea991a577527ed251ef375 data\trainmurdermystery\loot_table\blocks\pristine_gold_stairs.json
 1d4929d7d6176f60e5ea991a577527ed251ef375 data\trainmurdermystery\loot_table\blocks\stainless_steel_walkway.json
 1d4929d7d6176f60e5ea991a577527ed251ef375 data\trainmurdermystery\loot_table\blocks\wheel.json
@@ -144,6 +144,7 @@ cd7c6b5af1975231cc191a12ec939cc764fef3e0 data\trainmurdermystery\loot_table\bloc
 d025586d016c7416da318c12c85b5b6443104335 data\trainmurdermystery\loot_table\blocks\marble.json
 777b25f994dfa7d31c0b5bf0edd99bf714f4c708 data\trainmurdermystery\loot_table\blocks\dark_marble_wall.json
 bda27a18a8bc5ab86f906c14c32575f1d2f4e927 data\trainmurdermystery\loot_table\blocks\stripped_warped_stipe.json
+1d4929d7d6176f60e5ea991a577527ed251ef375 data\trainmurdermystery\loot_table\blocks\rusted_wheel.json
 1d4929d7d6176f60e5ea991a577527ed251ef375 data\trainmurdermystery\loot_table\blocks\ebony_herringbone_stairs.json
 980d41ed253914f35a7965e0072f79480feb977a data\trainmurdermystery\loot_table\blocks\rhombus_glass.json
 1d4929d7d6176f60e5ea991a577527ed251ef375 data\trainmurdermystery\loot_table\blocks\ebony_cabinet.json

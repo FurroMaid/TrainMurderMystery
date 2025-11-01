@@ -17,7 +17,8 @@ public interface TMMBlockEntities {
     BlockEntityType<SmallDoorBlockEntity> MAROON_STEEL_DOOR = registrar.create("maroon_steel_door", BlockEntityType.Builder.create((pos, state) -> new SmallDoorBlockEntity(TMMBlockEntities.MAROON_STEEL_DOOR, pos, state), TMMBlocks.MAROON_STEEL_DOOR));
     BlockEntityType<SmallDoorBlockEntity> MUNTZ_STEEL_DOOR = registrar.create("muntz_steel_door", BlockEntityType.Builder.create((pos, state) -> new SmallDoorBlockEntity(TMMBlockEntities.MUNTZ_STEEL_DOOR, pos, state), TMMBlocks.MUNTZ_STEEL_DOOR));
     BlockEntityType<SmallDoorBlockEntity> NAVY_STEEL_DOOR = registrar.create("navy_steel_door", BlockEntityType.Builder.create((pos, state) -> new SmallDoorBlockEntity(TMMBlockEntities.NAVY_STEEL_DOOR, pos, state), TMMBlocks.NAVY_STEEL_DOOR));
-    BlockEntityType<WheelBlockEntity> WHEEL = registrar.create("wheel", BlockEntityType.Builder.create(WheelBlockEntity::create, TMMBlocks.WHEEL));
+    BlockEntityType<WheelBlockEntity> WHEEL = registrar.create("wheel", BlockEntityType.Builder.create((pos, state) -> new WheelBlockEntity(TMMBlockEntities.WHEEL, pos, state), TMMBlocks.WHEEL));
+    BlockEntityType<WheelBlockEntity> RUSTED_WHEEL = registrar.create("rusted_wheel", BlockEntityType.Builder.create((pos, state) -> new WheelBlockEntity(TMMBlockEntities.RUSTED_WHEEL, pos, state), TMMBlocks.RUSTED_WHEEL));
     BlockEntityType<BeveragePlateBlockEntity> BEVERAGE_PLATE = registrar.create("beverage_plate", BlockEntityType.Builder.create(BeveragePlateBlockEntity::new, TMMBlocks.FOOD_PLATTER, TMMBlocks.DRINK_TRAY));
     BlockEntityType<TrimmedBedBlockEntity> TRIMMED_BED = registrar.create("trimmed_bed", BlockEntityType.Builder.create(TrimmedBedBlockEntity::create, TMMBlocks.RED_TRIMMED_BED, TMMBlocks.WHITE_TRIMMED_BED));
     BlockEntityType<HornBlockEntity> HORN = registrar.create("horn", BlockEntityType.Builder.create(HornBlockEntity::new, TMMBlocks.HORN));

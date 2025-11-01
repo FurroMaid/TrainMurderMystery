@@ -330,6 +330,7 @@ public class TMMModelGen extends FabricModelProvider {
         registerFancySteel(generator, TMMBlocks.NAVY_STEEL, TMMBlocks.SMOOTH_NAVY_STEEL, TMMBlocks.NAVY_STEEL_TILES, TMMBlocks.NAVY_STEEL_PANEL, TMMBlocks.NAVY_STEEL_TILES_PANEL, TMMBlocks.SMOOTH_NAVY_STEEL_PANEL, TMMBlocks.NAVY_STEEL_DOOR, TMMBlocks.Family.SMOOTH_NAVY_STEEL);
 
         this.registerParticleBlockWithItemSprite(generator, TMMBlocks.WHEEL, TMMBlocks.DARK_STEEL);
+        this.registerParticleBlockWithItemSprite(generator, TMMBlocks.RUSTED_WHEEL, TMMBlocks.DARK_STEEL);
         generator.registerSimpleCubeAll(TMMBlocks.RED_MOQUETTE);
         generator.registerSimpleCubeAll(TMMBlocks.BROWN_MOQUETTE);
         generator.registerSimpleCubeAll(TMMBlocks.BLUE_MOQUETTE);

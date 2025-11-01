@@ -3,6 +3,7 @@ package dev.doctor4t.trainmurdermystery.block;
 import com.mojang.serialization.MapCodec;
 import dev.doctor4t.trainmurdermystery.block_entity.WheelBlockEntity;
 import dev.doctor4t.trainmurdermystery.index.TMMBlockEntities;
+import dev.doctor4t.trainmurdermystery.index.TMMBlocks;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.item.ItemPlacementContext;
@@ -65,7 +66,7 @@ public class WheelBlock extends BlockWithEntity {
 
     @Override
     public @Nullable BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-        return new WheelBlockEntity(TMMBlockEntities.WHEEL, pos, state);
+        return new WheelBlockEntity(state.getBlock() == TMMBlocks.RUSTED_WHEEL ? TMMBlockEntities.RUSTED_WHEEL : TMMBlockEntities.WHEEL, pos, state);
     }
 
     @Override

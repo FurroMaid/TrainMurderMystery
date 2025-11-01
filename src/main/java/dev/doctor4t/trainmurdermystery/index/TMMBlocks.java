@@ -268,6 +268,7 @@ public interface TMMBlocks {
 
     // Wheels
     Block WHEEL = registrar.createWithItem("wheel", new WheelBlock(AbstractBlock.Settings.copy(DARK_STEEL).nonOpaque().sounds(BlockSoundGroup.COPPER)), TMMItems.DECORATION_GROUP);
+    Block RUSTED_WHEEL = registrar.createWithItem("rusted_wheel", new WheelBlock(AbstractBlock.Settings.copy(DARK_STEEL).nonOpaque().sounds(BlockSoundGroup.COPPER)), TMMItems.DECORATION_GROUP);
 
     // Platters
     Block FOOD_PLATTER = registrar.createWithItem("food_platter", new FoodPlatterBlock(
